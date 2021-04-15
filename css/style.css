@@ -1,0 +1,26 @@
+h1 {
+  font: Montserrat;
+  color: #156963;
+}
+h5 {
+  font: Poppins;
+  color: #156963;
+}
+h6 {
+  font: Work Sans;
+  color: #156963;
+}
+ul {
+  padding: 0;
+}
+#signupbtn {
+  color: #156963;
+  font: Nunito;
+}
+#signinbtn {
+  font: Nunito;
+}
+p {
+  font: Montserrat;
+  size: 16px;
+}
