@@ -21,38 +21,23 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <script>
-      function SubForm (){
-        $.ajax({
-          url:"https://api.apispreadsheets.com/data/10948/",
-          type:"post",
-          data:$("#myForm").serializeArray(),
-          success: function(){
-            alert("Form Data Submitted :)")
-          },
-          error: function(){
-            alert("There was an error :(")
-          }
-        });
-      }
-    </script>
   </head>
 
   <body>
     <header class="menu-bar">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0">
+          <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12 p-0">
             <img
               src="images/pexels-cottonbro-4503751 1.png"
               class="img-fluid"
               alt="Responsive image"
             />
           </div>
-          <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
-            <div class="row m-2">
+          <div class="col-xl-8 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="row m-3">
               <nav
-                class="navbar navbar-expand-lg navbar-light"
+                class="navbar navbar-expand-xl navbar-light"
                 style="background-color: #ffffff"
               >
                 <div class="container-fluid">
@@ -80,7 +65,7 @@
                       <li class="nav-item">
                         <button
                           type="button"
-                          class="btn btn-light m-3"
+                          class="btn btn-light"
                           id="signupbtn"
                           style="background-color: #ffffff"
                         >
@@ -90,15 +75,15 @@
                       <li class="nav-item">
                         <button
                           type="button"
-                          class="btn btn-success m-3"
+                          class="btn btn-success"
                           id="signinbtn"
                           style="background-color: #156963"
                         >
                           Sign in
                         </button>
                       </li>
-                      <li class="nav-item"></li>
-                      <li class="nav-item dropdown m-3">
+
+                      <li class="nav-item dropdown">
                         <button
                           type="button"
                           class="btn btn-success dropdown-toggle"
@@ -106,26 +91,46 @@
                           href="#"
                           role="button"
                           aria-expanded="false"
-                          id="signinbtn"
+                          id="menubtn"
                           style="background-color: #156963"
                         >
                           Menu
                         </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
+                        <ul
+                          class="dropdown-menu"
+                          style="
+                            right: 0;
+                            left: auto;
+                            padding-top: 0;
+                            padding-bottom: 0;
+                          "
+                        >
                           <li>
-                            <a class="dropdown-item" href="#">Another action</a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="#"
-                              >Something else here</a
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              style="color: #156963"
+                              >Element one</a
                             >
                           </li>
                           <li>
                             <hr class="dropdown-divider" />
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#">Separated link</a>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              style="color: #156963"
+                              >Element next long</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              style="color: #156963"
+                              >Element next</a
+                            >
                           </li>
                         </ul>
                       </li>
@@ -134,144 +139,236 @@
                 </div>
               </nav>
             </div>
-            <div class="row">
-              <h1>Have questions</h1>
-            </div>
-            <div class="row">
-              <p class="text-justify">
-                Необхідно створити форму зворотньго зв’язку. Для розуміння
-                роботи форми, а саме зміщення label при наборі тексту,
-                рекомендуємо ознайомитися з Google Material Design
-                (https://material.io/components/text-fields). Також створити JS
-                валідацію форми. Ім’я повинно бути мінімум 3 символи (не
-                враховуючи порожні). Номер телефону повинен мати маску, задану
-                на дизайні. Додаткове завдання: данні форми після відправки
-                автоматично додавати до Google Spreadsheets по API (мову
-                інтеграції можете обрати на свій розсуд).
-              </p>
-            </div>
-            <form id="myForm">
-              <div class="form-group">
-                <div
-                  class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
-                >
-                  <input
-                    name="name"
-                    class="mdl-textfield__input"
-                    type="text"
-                    id="sample3"
-                  />
-                  <label class="mdl-textfield__label" for="sample3"
-                    >Your name</label
-                  >
-                </div>
+            <div class="container m-1 p-1">
+              <div class="row">
+                <h1>Have questions</h1>
               </div>
-              <div class="form-group">
-                <div
-                  class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
-                >
-                  <input
-                    name="phone"
-                    class="mdl-textfield__input"
-                    type="text"
-                    id="phone"
-                    placeholder="+380 __ ___ __ __"
-                  />
-                  <label class="mdl-textfield__label" for="sample3"
-                    >Phone</label
-                  >
-                </div>
+              <div class="row">
+                <p>
+                  Необхідно створити форму зворотньго зв’язку. Для розуміння
+                  роботи форми, а саме зміщення label при наборі тексту,
+                  рекомендуємо ознайомитися з Google Material Design
+                  (https://material.io/components/text-fields). Також створити
+                  JS валідацію форми. Ім’я повинно бути мінімум 3 символи (не
+                  враховуючи порожні). Номер телефону повинен мати маску, задану
+                  на дизайні. Додаткове завдання: данні форми після відправки
+                  автоматично додавати до Google Spreadsheets по API (мову
+                  інтеграції можете обрати на свій розсуд).
+                </p>
               </div>
-              <button
-                type="submit"
-                class="btn btn-success m-3"
-                onclick='SubForm()'
-                id="signinbtn"
-                style="background-color: #156963"
+
+              <form
+                action="https://docs.google.com/forms/d/e/1FAIpQLScwUYKw1SLzCOTvGgI9k1wXTvqRI2bSTcioy-u5Xfi0CoGTjg/formResponse"
+                target="_self"
+                id="bootstrapForm"
+                method="POST"
               >
-                SEND
-              </button>
-            </form>
+                <div class="form-group">
+                  <div
+                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+                  >
+                    <input
+                      class="mdl-textfield__input"
+                      id="149436147"
+                      type="text"
+                      name="entry.149436147"
+                    />
+                    <label class="mdl-textfield__label" for="sample3"
+                      >Your name</label
+                    >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div
+                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+                  >
+                    <input
+                      name="entry.932244819"
+                      class="mdl-textfield__input"
+                      type="text"
+                      id="phone"
+                      placeholder="+380 __ ___ __ __"
+                    />
+                    <label class="mdl-textfield__label" for="sample3"
+                      >Phone</label
+                    >
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  value="Submit"
+                  class="btn btn-success m-3"
+                  id="signinbtn"
+                  style="background-color: #156963"
+                >
+                  SEND
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </header>
     <main>
-      <div class="container-fluid p-5">
-        <div class="row justify-content-start">
-          <div class="container m-2 p-4">
-            <div class="row justify-content-between">
-              <div class="col-xl-3 col-lg-6 col-md-6">
-                <img src="images/Group 12.png" alt="..." />
-              </div>
-              <div class="col-xl-3 col">
-                <img src="images/Group 12.png" alt="..." />
-              </div>
-              <div class="col-xl-3 col-lg-6 col-md-6">
-                <img src="images/Group 12.png" alt="..." />
-              </div>
-              <div class="col-xl-3 col">
-                <img src="images/Group 12.png" alt="..." />
+      <div class="container">
+        <div class="row" id="mobile-block">
+          <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="card" style="width: 100%">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-3">
+                    <img
+                      src="images/fast.png"
+                      class="img-fluid"
+                      alt="Responsive image"
+                    />
+                  </div>
+                  <div class="col-8">
+                    <h4 class="card-title">Мобільна версія</h4>
+                  </div>
+                </div>
+                <p class="card-text" style="font-weight: 400">
+                  Адаптивну версію верстки потрібно зробити на свій розсуд, так
+                  щоб нею було зручно користуватися на різних девайсах
+                </p>
               </div>
             </div>
           </div>
-          <div class="container m-2">
-            <div class="row">
-              <img src="images/Group 75.png" alt="..." />
+          <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="card" style="width: 100%">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-3">
+                    <img
+                      src="images/fast.png"
+                      class="img-fluid"
+                      alt="Responsive image"
+                    />
+                  </div>
+                  <div class="col-8">
+                    <h4 class="card-title">Мобільна версія</h4>
+                  </div>
+                </div>
+                <p class="card-text" style="font-weight: 400">
+                  Адаптивну версію верстки потрібно зробити на свій розсуд, так
+                  щоб нею було зручно користуватися на різних девайсах
+                </p>
+              </div>
             </div>
           </div>
-          <div class="container m-2">
-            <div class="row">
+          <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="card" style="width: 100%">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-3">
+                    <img
+                      src="images/fast.png"
+                      class="img-fluid"
+                      alt="Responsive image"
+                    />
+                  </div>
+                  <div class="col-8">
+                    <h4 class="card-title">Мобільна версія</h4>
+                  </div>
+                </div>
+                <p class="card-text" style="font-weight: 400">
+                  Адаптивну версію верстки потрібно зробити на свій розсуд, так
+                  щоб нею було зручно користуватися на різних девайсах
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="card" style="width: 100%">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-3">
+                    <img
+                      src="images/fast.png"
+                      class="img-fluid"
+                      alt="Responsive image"
+                    />
+                  </div>
+                  <div class="col-8">
+                    <h4 class="card-title">Мобільна версія</h4>
+                  </div>
+                </div>
+                <p class="card-text" style="font-weight: 400">
+                  Адаптивну версію верстки потрібно зробити на свій розсуд, так
+                  щоб нею було зручно користуватися на різних девайсах
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="square-box">
+          <div class="square-content">
+            <div>
+              <p>
+                Нижче представлений дизайн Google карти. Тут необхідно
+                підключити API Google Maps і нанести покажчики на координати (їх
+                можна взяти приблизно). Основне завдання додати кастомні іконки,
+                зазначені на дизайні. Блоки із завданням також потрібно залишити
+                в верстці.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="map">
+          <div class="map-content">
+            <div>
               <iframe
+                class="responsive-map"
                 src="https://www.google.com/maps/d/u/0/embed?mid=1GPfDgeXlEAGmjwF2G60sj-ren0t0yAoZ"
-                height="677"
               ></iframe>
             </div>
           </div>
-          <div class="container m-2">
+        </div>
+
+        <div class="ytube">
+          <div class="container-fluid p-0 m-0">
             <div class="row">
-              <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 p-0">
+              <div class="col-xl=6 col-lg-6 col-md-12">
                 <div id="player"></div>
               </div>
-              <div class="col">
-                <div class="row justify-content-around">
-                  <div class="col-4">
+              <div
+                class="col-xl-6 col-lg-6 col-md-12 col-sm-12 p-3"
+                id="ytube-controller"
+              >
+                <div class="row">
+                  <div class="col-xl-7 col-md-12">
                     <button
                       type="submit"
-                      class="btn btn-success m-3"
+                      class="btn btn-success"
                       id="play"
                       onClick="playVideo()"
                       style="background-color: #156963"
                     >
                       PLAY
                     </button>
-                  </div>
-                  <div class="col-4">
+
                     <button
                       type="submit"
-                      class="btn btn-success m-3"
+                      class="btn btn-success"
                       id="pause"
                       onClick="pauseVideo()"
                       style="background-color: #156963"
                     >
                       PAUSE
                     </button>
-                  </div>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-6">
+
                     <button
                       type="submit"
-                      class="btn btn-success m-3"
+                      class="btn btn-success"
                       id="seekto"
                       style="background-color: #156963"
                     >
                       RUN OF THE SET MARK
                     </button>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col">
+                  <div class="col-xl-4"></div>
+                  <div class="col-xl-12 p-4">
                     <div
                       class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
                     >
@@ -287,12 +384,14 @@
                   </div>
                 </div>
                 <div class="row">
-                  <p class="text-justify">
-                    Необхідно підключити YoutubeAPI, і вставити будь-яке відео
-                    (зліва). Поруч створити кнопки управління для плеєра. Третя
-                    кнопка управління повинна почати воспроізвденіе відео з
-                    вказаної в полі (startSeconds) секунди.
-                  </p>
+                  <div class="col-lg-12 p-md-4">
+                    <p style="position: relative">
+                      Необхідно підключити YoutubeAPI, і вставити будь-яке відео
+                      (зліва). Поруч створити кнопки управління для плеєра.
+                      Третя кнопка управління повинна почати воспроізвденіе
+                      відео з вказаної в полі (startSeconds) секунди.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -300,11 +399,11 @@
         </div>
       </div>
     </main>
-    <footer class="pt-4 my-md-5 pt-md-5 border-top">
-      <div class="container-fluid">
+    <footer class="pt-4 my-md-5 pt-md-4 border-top">
+      <div class="container-fluid" style="padding-bottom: 2%">
         <div class="row">
-          <div class="col-2 col-xs"></div>
-          <div class="col-2">
+          <div class="col-2"></div>
+          <div class="col-lg-2 col-sm-12">
             <h5>PLANKTU</h5>
             <ul class="list-unstyled text-small">
               <h6>Plantku House</h6>
@@ -314,7 +413,7 @@
               </p>
             </ul>
           </div>
-          <div class="col-2">
+          <div class="col-lg-2 col-sm-12">
             <br />
             <ul class="list-unstyled text-small">
               <h6>Menu</h6>
@@ -343,7 +442,25 @@
       });
     </script>
     <script src="js/scripts.js" type="text/javascript"></script>
-    
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"
+      integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("#bootstrapForm").submit(function (event) {
+        event.preventDefault();
+        var extraData = {};
+        $("#bootstrapForm").ajaxSubmit({
+          data: extraData,
+          dataType: "jsonp",
+          error: function () {
+            alert("Form Submitted. Thanks.");
+          },
+        });
+      });
+    </script>
     <script src="http://www.google.com/jsapi"></script>
   </body>
 </html>

@@ -6,6 +6,11 @@ h5 {
   font: Poppins;
   color: #156963;
 }
+h4 {
+  font: Poppins;
+  font-weight: 700;
+  color: #156963;
+}
 h6 {
   font: Work Sans;
   color: #156963;
@@ -16,11 +21,129 @@ ul {
 #signupbtn {
   color: #156963;
   font: Nunito;
+  font-weight: 700;
+  width: 111px;
+  height: 36px;
+}
+.nav-item {
+  height: 36px;
 }
 #signinbtn {
   font: Nunito;
+  font-weight: 600;
+  width: 111px;
+  height: 36px;
+  margin-right: 12px;
 }
+#menubtn {
+  font: Nunito;
+  font-weight: 600;
+  width: 111px;
+  height: 36px;
+}
+.dropdown-menu {
+  width: 173px;
+  height: 112px;
+}
+
 p {
   font: Montserrat;
   size: 16px;
+}
+html {
+  zoom: 150%;
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin:0;
+  padding:0;
+}
+main{
+  margin-right:3%;
+  margin-left:3%;
+}
+#play {
+  font: Nunito;
+  font-weight: 600;
+  width: 47%;
+  height: 55px;
+  margin-right: 3%;
+  margin-top: 2px;
+}
+#pause {
+  font: Nunito;
+  font-weight: 600;
+  margin-top: 2px;
+  width: 47%;
+  height: 55px;
+}
+#seekto {
+  font: Nunito;
+  font-weight: 600;
+  width: 100%;
+  height: 55px;
+  margin-top: 4%;
+}
+
+.square-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #f3f3f3;
+  margin-top: 6%;
+}
+
+.square-content {
+  display: flex;
+  justify-content:center;
+  position: relative;
+  color: #156963;
+}
+.square-content div {
+  width: 100%;
+  height: 100%;
+}
+.square-content p {
+  
+  padding: 3%;
+  
+  color: #156963;
+  font-size: 100%;
+  font-weight: 400;
+  font: Montserrat;
+}
+.map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #f3f3f3;
+  margin-top: 6%;
+}
+
+
+.responsive-map{
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 677px;
+}
+.ytube{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 6%;
+}
+#mobile-block{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 6%;
+}
+#ytube-controller{
+  padding-left: 2%;
 }
