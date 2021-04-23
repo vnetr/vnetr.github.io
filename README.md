@@ -1,3 +1,3 @@
 # vnetr.github.io
 Силка на Spreadsheets:
-https://docs.google.com/spreadsheets/d/1Wx8F9X-EJswAOOKKRjgZs5LKRitBInzNGaHii04J0nk/edit#gid=0
+https://docs.google.com/spreadsheets/d/12ldJc-dRiHHL75894D8mXRRSSWreZ39FBFN3VzvJIZw/edit?resourcekey#gid=823601700
